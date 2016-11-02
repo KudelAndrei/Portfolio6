@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Pizza</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<!-- Template Basic Images End -->
+
+	<!-- Bootstrap (latest) Grid Styles Only -->
+	<style>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#23527c;text-decoration:underline}a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs,.visible-sm,.visible-md,.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}table.visible-xs{display:table !important}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width:767px){.visible-xs-block{display:block !important}}@media (max-width:767px){.visible-xs-inline{display:inline !important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block !important}table.visible-sm{display:table !important}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block !important}table.visible-md{display:table !important}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width:1200px){.visible-lg{display:block !important}table.visible-lg{display:table !important}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width:1200px){.visible-lg-block{display:block !important}}@media (min-width:1200px){.visible-lg-inline{display:inline !important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width:767px){.hidden-xs{display:none !important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none !important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none !important}}@media (min-width:1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table !important}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}</style>
+
+	<!-- Header CSS (first screen styles from header.min.css) - inserted in the build of the project -->
+	<style>@charset "UTF-8";.button,.h1,.h2,.h3,.h4,.h5,.h6,b,body,h1,h2,h3,h4,h5,h6,strong{font-family:Raleway,sans-serif}.bgi-head,.divbg{background-size:cover}::-webkit-input-placeholder{color:#666;opacity:1}:-moz-placeholder{color:#666;opacity:1}::-moz-placeholder{color:#666;opacity:1}:-ms-input-placeholder{color:#666;opacity:1}body input:focus:required:invalid,body input:required:valid,body textarea:focus:required:invalid,body textarea:required:valid{color:#666}body{font-size:16px;min-width:320px;position:relative;overflow-x:hidden;color:#111;background-color:#f4f4f4}a{color:#fff;font-weight:500;outline:0!important}a:active,a:hover{color:#fff;text-decoration:none}a:focus{text-decoration:none;color:#fff}button.buttons{background-color:#c59d5f;color:#fff;padding:15px 35px;border:none;text-transform:uppercase;font-weight:700;overflow:hidden}button.buttons i{-webkit-transition:all .5s ease-out;transition:all .5s ease-out}button.buttons:hover{background-color:#cca872}button.buttons:active{background-color:#be924c}.bgc-head,.bgi-head,.divabs{position:absolute;top:0;left:0;width:100%;height:100%}.divbg{position:relative;background-position:center center}.poscentr{position:absolute;top:50%;left:50%;-webkit-transform:translatex(-50%) translatey(-50%);-ms-transform:translatex(-50%) translatey(-50%);transform:translatex(-50%) translatey(-50%)}*{outline:0}.hidden{display:none}b,strong{font-weight:400}.button,.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{font-weight:700;text-transform:uppercase}li,ul{padding:0;margin:0;list-style-type:none}.buttons i{font-size:20px;margin-right:10px}.buttons:focus{boreder:none}.main-head{min-height:700px;position:relative}.bgi-head{-webkit-filter:blur(4px);filter:blur(4px)}.bgc-head{background-color:#111;opacity:.3}.top-line{background-color:rgba(0,0,0,.4);color:#fff;padding:25px 0;position:relative;text-align:center}.main-menu__item a:after,.main-menu__item a:hover .main-menu__item i{background-color:#c59d5f}.logo{display:block;text-align:left}.logo img,.logo__head,.main-menu__item,.mobile{display:inline-block}.logo:hover img{-webkit-transform:rotate(10deg) scale(1.2);-ms-transform:rotate(10deg) scale(1.2);transform:rotate(10deg) scale(1.2)}.logo img{width:50px;height:50px;-webkit-transition:all .3s ease-out;transition:all .3s ease-out}.logo__head{vertical-align:top;font-family:NautilusPompiliusRegular,sans-serif;font-size:1.5em;line-height:1em;-webkit-transform:rotate(-9deg);-ms-transform:rotate(-9deg);transform:rotate(-9deg);padding-left:12px}.logo__head span{color:#c59d5f}.main-menu__item{padding:10px 15px}.main-menu__item a{text-transform:uppercase;font-size:.75em;position:relative}.main-menu__item a:after{content:'';position:absolute;width:100%;height:1px;bottom:-2px;left:0;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:bottom right;-ms-transform-origin:bottom right;transform-origin:bottom right;-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s}.menu-wrap,.sl{position:relative}.main-menu__item a:hover:after{-webkit-transform-origin:bottom left;-ms-transform-origin:bottom left;transform-origin:bottom left;-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1)}.main-menu__item i{width:22px;height:22px;text-align:center;line-height:20px;-webkit-border-radius:10em;border-radius:10em;opacity:.6;margin-right:6px}.main-menu__item--active a{color:#c59d5f;text-decoration:none}.main-menu__item--active i{background-color:#c59d5f;color:#262626}@-webkit-keyframes shake{10%,90%{-webkit-transform:translate3d(-2px,0,0);transform:translate3d(-2px,0,0)}30%,60%{-webkit-transform:translate3d(0,2px,0);transform:translate3d(0,2px,0)}100%,50%{-webkit-transform:translate3d(1,-2px,0);transform:translate3d(1,-2px,0)}}@keyframes shake{10%,90%{-webkit-transform:translate3d(-2px,0,0);transform:translate3d(-2px,0,0)}30%,60%{-webkit-transform:translate3d(0,2px,0);transform:translate3d(0,2px,0)}100%,50%{-webkit-transform:translate3d(1,-2px,0);transform:translate3d(1,-2px,0)}}.mobile{text-align:right;float:right;vertical-align:middle;cursor:pointer}.mobile:hover i{-webkit-animation-duration:.2s;animation-duration:.2s;-webkit-animation-name:shake;animation-name:shake;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-direction:alternate;animation-direction:alternate;-webkit-transition:all .25s;transition:all .25s;font-size:1.25em}.mobile__title{display:block;opacity:.7;font-size:.75em;margin:0;letter-spacing:1px;line-height:1em}.mobile__call{margin:0;font-size:1.25em;font-family:"Roboto Condensed";font-weight:700}.mobile__call span{font-size:16px;padding-left:8px}.mobile__call i{color:#c59d5f}.animated{-webkit-animation-duration:1000 ms;animation-duration:1000 ms;-webkit-animation-fill-mode:both;animation-fill-mode:both}.owl-animated-out{z-index:1}.owl-animated-in{z-index:0}.fadeOut{-webkit-animation-name:fadeOut;animation-name:fadeOut}.sl-head{padding-top:60px;margin-bottom:170px;color:#fff}.sl-head .slick-current .btn-head,.sl-head .slick-current h1,.sl-head .slick-current img,.sl-head .slick-current p{opacity:1;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);-webkit-transform:scale(1) rotate(0);-ms-transform:scale(1) rotate(0);transform:scale(1) rotate(0)}.sl__title{font-family:IsadoraBold,sans-serif;text-transform:none;font-size:3.125em;font-weight:400;line-height:1.25em;margin-top:120px;-webkit-transition:all .9s ease;transition:all .9s ease;opacity:.2;-webkit-transform:translateX(150px);-ms-transform:translateX(150px);transform:translateX(150px)}.sl__desc{font-weight:300;margin-bottom:40px;-webkit-transition:all .7s ease-out .2s;transition:all .7s ease-out .2s;opacity:.2;-webkit-transform:translateX(150px);-ms-transform:translateX(150px);transform:translateX(150px)}.sl__img img{-webkit-transition:all .8s ease-out .2s;transition:all .8s ease-out .2s;width:100%;-webkit-transform:scale(0) rotate(140deg);-ms-transform:scale(0) rotate(140deg);transform:scale(0) rotate(140deg);opacity:0}.sl .btn-head{-webkit-transition:all .7s ease-out .4s;transition:all .7s ease-out .4s;opacity:0;-webkit-transform:translateX(140px);-ms-transform:translateX(140px);transform:translateX(140px)}.sl .slick-next:before,.sl .slick-prev:before{font-size:36px;width:50px;height:50px;text-align:center;background-color:rgba(197,157,95,.5);-webkit-border-radius:10em;border-radius:10em;display:inline-block;line-height:50px}.sl .slick-prev{left:-52px}.menu-wrap{display:inline-block}.toggle-mnu{display:block;padding-top:8px;width:40px;height:40px;float:right;margin:0 auto}.toggle-mnu span:after,.toggle-mnu span:before{content:"";position:absolute;left:0;top:9px}.toggle-mnu span:after{top:18px}.toggle-mnu span{position:relative;display:block}.toggle-mnu span,.toggle-mnu span:after,.toggle-mnu span:before{width:100%;height:4px;background-color:#fff;-webkit-transition:all .3s;transition:all .3s;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-border-radius:2px;border-radius:2px}.toggle-mnu.on span{background-color:transparent}.toggle-mnu.on span:before{-webkit-transform:rotate(45deg) translate(-1px,0);-ms-transform:rotate(45deg) translate(-1px,0);transform:rotate(45deg) translate(-1px,0)}.toggle-mnu.on span:after{-webkit-transform:rotate(-45deg) translate(6px,-7px);-ms-transform:rotate(-45deg) translate(6px,-7px);transform:rotate(-45deg) translate(6px,-7px)}</style>
+
+	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+	<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)};function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n};function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
+
+	<!-- Load Fonts CSS Start -->
+	<script>
+		loadCSS( "css/fonts.min.css?ver=1.0.0", false, "all" ); // Loading fonts, if the site is located in a subfolder
+		// loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" ); // Loading fonts, if the site is at the root
+	</script>
+	<!-- Load Fonts CSS End -->
+
+	<!-- Load Custom CSS Start -->
+	
+	<script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
+	<!-- Load Custom CSS End -->
+
+	<!-- Load Custom CSS Compiled without JS Start -->
+	<noscript>
+		<link rel="stylesheet" href="css/fonts.min.css">
+		<link rel="stylesheet" href="css/main.min.css">
+	</noscript>
+	<!-- Load Custom CSS Compiled without JS End -->
+
+	<!-- Custom Browsers Color Start -->
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+	<!-- Custom Browsers Color End -->
+
+</head>
+
+<body>
+
+	<header id="head" class="main-head">
+		<div class="bgi-head" style="background-image: url(img/bg.jpg)"></div>
+		<div class="bgc-head"></div>
+
+		<div class="top-line clearfix">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-xs-5 col-md-3 col-lg-2">
+						<a href="https://github.com/KudelAndrei" class="logo" target="_blank">
+							<img src="img/logo.svg" alt="Пицца на дом">
+							<div class="logo__head"><span>Пицца</span> <br> на дом</div>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-xs-7 col-sm-6 col-md-8 col-lg-push-7">
+						<div class="mobile">
+							<p class="mobile__title">Заказать по телефону:</p>
+							<a href="tel: +375297022268" class="mobile__call"><i class="fa fa-phone" aria-hidden="true"></i><span>+375 (29)</span> 222-11-11</a>
+						</div>
+					</div>
+
+					<div class="col-lg-7 col-sm-1 col-xs-2 col-lg-pull-3">
+						<div class="menu-wrap">
+							<a href="#" class="toggle-mnu hidden-lg"><span></span></a>
+							<nav class="mian-menu">
+								<ul>
+									<li class="main-menu__item main-menu__item--active"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#head">Начало</a></li>
+									<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#pizza">Выбрать пиццу</a></li>
+									<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#snack">Выбрать закуску</a></li>
+									<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#drink">Выбрать напитки</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="sl sl-head">
+					
+					<div class="sl__item"> 
+						<div class="col-md-4 col-md-push-1 col-sm-5">
+							<h1 class="sl__title carousel-head__title">Пицца <br> Неополетана</h1>
+							<p class="sl__desc carousel-head__desc">Великолепная, пикантная, горячая итальянская пицца с аппетитным французским сыром.</p>
+							<button class="buttons btn-head" data-id="1"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+						</div>
+						<div class="col-md-6 col-md-push-1 col-sm-7">
+							<div class="sl__img">
+								<img src="img/neapolitana.png" alt="Пицца неополетана">
+							</div>
+						</div>
+					</div>
+
+					<div class="sl__item"> 
+						<div class="col-md-4 col-md-push-1 col-sm-5">
+							<h1 class="sl__title carousel-head__title">Пицца <br> Пепперони</h1>
+							<p class="sl__desc carousel-head__desc">Великолепная, пикантная, горячая итальянская пицца с аппетитным французским сыром.</p>
+							<button class="buttons btn-head" data-id="3"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+						</div>
+						<div class="col-md-6 col-md-push-1 col-sm-7">
+							<div class="sl__img">
+								<img src="img/pepperony.png" alt="Пицца неополетана">
+							</div>
+						</div>
+					</div>
+
+					<div class="sl__item"> 
+						<div class="col-md-4 col-md-push-1 col-sm-5">
+							<h1 class="sl__title carousel-head__title">Пицца <br> Тропициана</h1>
+							<p class="sl__desc carousel-head__desc">Великолепная, пикантная, горячая итальянская пицца с аппетитным французским сыром.</p>
+							<button class="buttons btn-head" data-id="5"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+						</div>
+						<div class="col-md-6 col-md-push-1 col-sm-7">
+							<div class="sl__img">
+								<img src="img/tropicana.png" alt="Пицца неополетана">
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+	<section class="sect">
+		<div class="container">
+			<div class="row">
+				
+				<div class="select-pizza clearfix">
+					<div class="btn-down"><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
+					<h2 class="sect__head select-pizza__head" id="pizza">Выбрать пиццу</h2>
+
+					<!-- слайдер -->
+					<div class="row">
+						<div class="col-xs-10 col-xs-offset-1">
+
+							<div class="sl sl-second sl-pizza">
+
+								<div class="sl-second__item item-height"> 
+
+									<div class="sl-second__img  sl-second__img-pizza">
+										<img src="img/neapolitana.png" alt="papperony">
+										<div class="select-size clearfix">
+											<button class="select-size__btn select-size__btn--active" data-id="2">26</button>
+											<button class="select-size__btn" data-id="1">32</button>
+											<span class="price">10 руб.</span>
+										</div>
+										</div>
+										<h2 class="sl-second__head">Пицца Неопалитана, 26см</h2>
+										<p class="sl-second__desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.</p>
+										<p class="sl-second__comp"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+										<button class="buttons" data-id="1"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+									</div>
+								
+								<div class="sl-second__item item-height "> 
+									<div class="sl-second__img sl-second__img-pizza">
+										<img src="img/pepperony.png" alt="papperony">
+										<div class="select-size clearfix">
+											<button class="select-size__btn select-size__btn--active" data-id="4">26</button>
+											<button class="select-size__btn" data-id="3">32</button>
+											<span class="price">12 руб.</span>
+										</div>
+									</div>
+									<h2 class="sl-second__head">Пицца Пепперони, 26см</h2>
+									<p class="sl-second__desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.</p>
+									<p class="sl-second__comp"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+									<button class="buttons" data-id="2"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+								</div>
+
+								<div class="sl-second__item item-height "> 
+									<div class="sl-second__img sl-second__img-pizza">
+										<img src="img/tropicana.png" alt="papperony">
+										<div class="select-size clearfix">
+											<button class="select-size__btn select-size__btn--active" data-id="6">26</button>
+											<button class="select-size__btn" data-id="5">32</button>
+											<span class="price">8 руб.</span>
+										</div>
+									</div>
+									<h2 class="sl-second__head">Пицца Тропициана, 26см</h2>
+									<p class="sl-second__desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.</p>
+									<p class="sl-second__comp"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+									<button class="buttons" data-id="3"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+								</div>
+
+								<div class="sl-second__item item-height "> 
+									<div class="sl-second__img sl-second__img-pizza">
+										<img src="img/neapolitana.png" alt="papperony">
+										<div class="select-size clearfix">
+											<button class="select-size__btn select-size__btn--active">26</button>
+											<button class="select-size__btn">32</button>
+											<span class="price">10 руб.</span>
+										</div>
+									</div>
+									<h2 class="sl-second__head">Пицца Неопалитана, 26см</h2>
+									<p class="sl-second__desc">Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.</p>
+									<p class="sl-second__comp"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+									<button class="buttons" data-id="1"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+								</div>
+								
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section id="snack" class="sect select-snack clearfix">
+		<div class="bgc-head"></div>
+
+		<div class="container">	
+
+			<div class="row">
+				
+				<div class="col-sm-8 col-sm-offset-2">
+					<h2 class="sect__head">Выбрать закуски</h2>
+					<p class="select-snack__desc">Не забудьте выбрать свежие закуски и салаты от нашего шеф-повара,
+						которые гармонично дополнят ваше меню сегодня.</p>
+					</div>
+
+				</div>
+
+			<!-- слайдер -->
+			<div class="row">
+				<div class="btn-down"><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
+
+				<div class="col-xs-10 col-xs-offset-1">
+
+					<div class="sl sl-second sl-snack">
+
+						<div class="sl-second__item sl-snack__item"> 
+							<div class="sl-second__img sl-snack__img" style="background-image: url('img/salat1.jpg')"></div>
+							<div class="sl-snack__round"><span>4,3 руб. <br> 123 г.</span></div>
+							<div class="sl-snack__content">
+								<h2 class="sl-second__head sl-snack__head">Салат греческий</h2>
+								<p class="sl-second__desc">Лучшее дополнение к любому столу из свежих овощей.</p>
+							</div>
+							<p class="sl-second__comp sl-snack__comp"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+							<button class="buttons sl-snack__btn" data-id="7"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+						</div>
+
+						<div class="sl-second__item sl-snack__item"> 
+							<div class="sl-second__img sl-snack__img" style="background-image: url('img/salat2.jpg')"></div>
+							<div class="sl-snack__round"><span>6 руб. <br> 100 г.</span></div>
+							<div class="sl-snack__content">
+								<h2 class="sl-second__head sl-snack__head">Салат морской</h2>
+								<p class="sl-second__desc">Лучшее дополнение к любому столу из свежих овощей.</p>
+							</div>
+							<p class="sl-second__comp sl-snack__comp"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+							<button class="buttons sl-snack__btn" data-id="8"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+						</div>
+
+						<div class="sl-second__item sl-snack__item"> 
+							<div class="sl-second__img sl-snack__img" style="background-image: url('img/salat3.jpg')"></div>
+							<div class="sl-snack__round"><span>8,5 руб. <br> 150 г.</span></div>
+							<div class="sl-snack__content">
+								<h2 class="sl-second__head sl-snack__head">Салат с сыром фета и помидорами</h2>
+								<p class="sl-second__desc">Лучшее дополнение к любому столу из свежих овощей.</p>
+							</div>
+							<p class="sl-second__comp sl-snack__comp"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+							<button class="buttons sl-snack__btn" data-id="9"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+						</div>
+
+						<div class="sl-second__item sl-snack__item"> 
+							<div class="sl-second__img sl-snack__img" style="background-image: url('img/salat1.jpg')"></div>
+							<div class="sl-snack__round"><span>7 руб. <br> 150 г.</span></div>
+							<div class="sl-snack__content">
+								<h2 class="sl-second__head sl-snack__head">Салат греческий</h2>
+								<p class="sl-second__desc">Лучшее дополнение к любому столу из свежих овощей.</p>
+							</div>
+							<p class="sl-second__comp sl-snack__comp"><span>Состав:</span> сыр, грибы, чеснок, острый перец, еще длинное наименование</p>
+							<button class="buttons sl-snack__btn" data-id="7"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<section id="drink" class="sect select-drink">
+	<div class="btn-down"><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-8 col-xs-offset-2">
+				<h2 class="sect__head select-drink__head">Выбрать напитки</h2>
+				<p class="select-snack__desc select-drink__desc">Что может быть лучше освежающего газированного напитка в
+					дополнение к горячей ароматной пицце.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-10 col-xs-offset-1">
+
+					<div class="sl sl-second sl-drink">
+
+						<div class="sl-second__item">
+							<div class="sl-drink__img">
+								<img src="img/cola.png" alt="cola">
+							</div>
+							<h4 class="sl-drink__head">Кока-кола, 1,5л.</h4>
+							<p class="sl-drink__price"><span>2</span> руб.</p>
+							<button class="buttons" data-id="10"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+						</div>
+
+						<div class="sl-second__item">
+							<div class="sl-drink__img">
+								<img src="img/fanta.png" alt="cola">
+							</div>
+							<h4 class="sl-drink__head">Фанта, 1,5л.</h4>
+							<p class="sl-drink__price"><span>2</span> руб.</p>
+							<button class="buttons" data-id="11"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+						</div>
+
+						<div class="sl-second__item">
+							<div class="sl-drink__img">
+								<img src="img/sprite.png" alt="cola">
+							</div>
+							<h4 class="sl-drink__head">Спрайт, 1,5л.</h4>
+							<p class="sl-drink__price"><span>2</span> руб.</p>
+							<button class="buttons" data-id="12"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+						</div>
+
+						<div class="sl-second__item">
+							<div class="sl-drink__img">
+								<img src="img/cola.png" alt="cola">
+							</div>
+							<h4 class="sl-drink__head">Кока-кола, 1 л.</h4>
+							<p class="sl-drink__price"><span>1,6</span> руб.</p>
+							<button class="buttons" data-id="10"><i class="fa fa-check" aria-hidden="true"></i>Выбрать</button>
+						</div>
+
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="sect pay" style="background-image: url(img/flour.jpg);">
+		<div class="cintainer">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+
+					<div class="btn-down"><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
+					<h2 class="pay__head">Доставка и оплата</h2>
+					<p class="pay__desc">Не зависимо от того, какой сейчас час, какая погода и как далеко вы
+						живете - наша оперативная доставка с радостью привезет вам заказ
+						в любое время и по любому адресу г. Минск.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="contanct" class="sect contanct">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7">
+					<form id="main-form" class="main-form">
+						<h3 class="main-form__head">Адрес и время доставки</h3>
+						<p class="main-form__desc">Пожалуйста, выберите удобную дату и время доставки, введите ваш полный адрес и телефон, чтобы мы могли убедиться в том, что ваш заказ нашел вас:</p>
+						<div class="row">
+							<div class="col-sm-6">
+								<label for="Date_z" class="main-form__label">
+									<span>Дата доставки:</span>
+									<input id="Date_z" type="text" class="main-form__input" required="">
+								</label>
+							</div>
+							<div class="col-sm-6">
+								<label for="time_z" class="main-form__label">
+									<span>Время доставки:</span>
+									<input id="time_z" type="text" class="main-form__input" required="">
+								</label>
+							</div>
+							<div class="col-sm-6">
+								<label for="name_z" class="main-form__label">
+									<span>Ваше имя:</span>
+									<input id="name_z" type="text" class="main-form__input" required="">
+								</label>
+							</div>
+							<div class="col-sm-6">
+								<label for="mobile_z" class="main-form__label">
+									<span>Ваш телефон:</span>
+									<input id="mobile_z" type="text" class="main-form__input" required="">
+								</label>
+							</div>
+						</div>
+
+						<label for="adrr_z" class="main-form__label">
+							<span>Адрес доставки:</span>
+							<input type="text" id="adrr_z" class="main-form__input" required="">
+						</label>
+
+						<label for="comm_z" class="main-form__label">
+							<span>Комментарий к заказу:</span>		
+							<textarea name="text" id="comm_z"></textarea>
+						</label>
+						
+					
+				</div>
+				<div class="col-md-5">
+
+					<div class="order">
+						<div class="order-wrap">
+							<h2 class="order__head">Ваш <span>Заказ</span></h2>
+							<div class="order__items">
+								<span>Ваш заказ пуст :(</span>
+							</div>
+							<h2 class="order__result">Итого: <span id ="valresult">0 руб.</span></h2>
+							<button class="button order__reset"><i class="fa fa-times" aria-hidden="true"></i>Сбросить</button>
+							<button class="buttons order-btn" from="#main-form" type="submit"><i class="fa fa-check" aria-hidden="true"></i>Оформить</button>
+							</form>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="main-foot" style="background-image: url(img/flour.jpg);">
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-md-3 col-sm-6 col-xs-12 ">
+					<div class="main-foot--bottom">
+						<h4 class="main-foot__head">Пицца на дом</h4>
+						<p class="main-foot__desc">Моментальная доставка свежей горячей пиццы прямо к вам одмой
+						или в офис.</p>
+						<ul>
+							<li class="main-foot__info"><a href="mailto:kudel1995@mail.ru"><i class="fa fa-envelope-o" aria-hidden="true"></i>kudel1995@mail.ru</a></li>
+							<li class="main-foot__info"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+375297022268"> +375 (29) 999-88-33</a></li>
+							<li class="main-foot__info"><i class="fa fa-map-marker" aria-hidden="true"></i>Минск ул. Ленина 201, оф.15 </li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="col-md-3 col-sm-6 col-xs-12 ">
+					<div class="main-foot--bottom">
+						<h4 class="main-foot__head">Заказать</h4>
+						<nav class="main-manu--foot">
+							<ul>
+								<li class="main-menu__item main-menu__item--active"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#head">Начало</a></li>
+								<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#pizza">Выбрать пиццу</a></li>
+								<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#snack">Выбрать закуску</a></li>
+								<li class="main-menu__item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#drink">Выбрать напитки</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				
+				<div class="col-md-4 intst">
+					<div class="row">
+						<h4 class="main-foot__head main-foot__head--center">Галерея в Instagram:</h4>
+						<div class="col-sm-3 col-xs-6">
+							<a href="#" class="inst-img">
+								<span>
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+									<div class="main-foot__img" style="background-image: url(img/salat2.jpg);"></div>
+								</span>
+							</a>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+							<a href="#" class="inst-img">
+								<span>
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+									<div class="main-foot__img" style="background-image: url(img/salat3.jpg);"></div>
+								</span>
+							</a>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+							<a href="#" class="inst-img">
+								<span>
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+									<div class="main-foot__img" style="background-image: url(img/salat1.jpg);"></div>
+								</span>
+							</a>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+							<a href="#" class="inst-img">
+								<span>
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+									<div class="main-foot__img" style="background-image: url(img/salat2.jpg);"></div>
+								</span>
+							</a>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+							<a href="#" class="inst-img">
+								<span>
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+									<div class="main-foot__img" style="background-image: url(img/salat2.jpg);"></div>
+								</span>
+							</a>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+							<a href="#" class="inst-img">
+								<span>
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+									<div class="main-foot__img" style="background-image: url(img/salat1.jpg);"></div>
+								</span>
+							</a>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+							<a href="#" class="inst-img">
+								<span>
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+									<div class="main-foot__img" style="background-image: url(img/salat2.jpg);"></div>
+								</span>
+							</a>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+							<a href="#" class="inst-img">
+								<span>
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+									<div class="main-foot__img" style="background-image: url(img/salat1.jpg);"></div>
+								</span>
+							</a>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+							<a href="#" class="inst-img">
+								<span>
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+									<div class="main-foot__img" style="background-image: url(img/salat3.jpg);"></div>
+								</span>
+							</a>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+							<a href="#" class="inst-img">
+								<span>
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+									<div class="main-foot__img" style="background-image: url(img/salat2.jpg);"></div>
+								</span>
+							</a>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+							<a href="#" class="inst-img">
+								<span>
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+									<div class="main-foot__img" style="background-image: url(img/salat3.jpg);"></div>
+								</span>
+							</a>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+							<a href="#" class="inst-img">
+								<span>
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+									<div class="main-foot__img" style="background-image: url(img/salat1.jpg);"></div>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-2">
+					<h4 class="main-foot__head main-foot__head-soc">Заказать</h4>
+					<ul>
+						<li class="main-foot__soc"><a href="https://vk.com/crymurder" class="soaftor" target="_blank" data-title="Соавтор по написанию JS"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a></li>
+						<li class="main-foot__soc"><a href="https://vk.com/id252972675" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i>Vkontakte</a></li>
+						<li class="main-foot__soc"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>Tvitter</a></li>
+						<li class="main-foot__soc"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i>Linkedin</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+	<div class="hidden">
+		<!-- code -->
+	</div>
+
+	<!-- Optimized loading JS Start -->
+	<script>var scr = {"scripts":[
+		{"src" : "js/libs.min.js", "async" : false},
+		{"src" : "js/common.js", "async" : false}
+		]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+	</script>
+	<!-- Optimized loading JS End -->
+
+</body>
+</html>
