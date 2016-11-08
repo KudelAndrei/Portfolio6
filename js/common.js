@@ -163,9 +163,4 @@ $(function() {
 	} catch(err) {
 	};
 
-	$(".buttons").click(function(){
-		$(this).children("i").css({"transform":"rotate(360deg)"});
-	});
-
-
 });
