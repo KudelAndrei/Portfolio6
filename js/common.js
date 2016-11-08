@@ -4,7 +4,11 @@ $(function() {
 	// ВЫравнивание блоков по высоте
 	$(".sl-snack__item h2").equalHeights(); 
 	$(".sl-pizza-wrap").equalHeights(); 
-
+	
+	$('.buttons').click(function(){
+		$(this).toggleClass('on');
+	});
+	
 	//функция добавления в заказ
 	function Product(name, price){
 		this.name = name;
